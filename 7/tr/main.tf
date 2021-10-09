@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "yandex" {
-  token     = " "
+  token     = " " # need to use vars
   cloud_id  = " "
   folder_id = " "
   zone      = " "
