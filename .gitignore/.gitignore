@@ -8,9 +8,17 @@ node_modules/
 dist/
 
 
-#Terraform 
+# Terraform
 .terraform/
-.terraform.lock.hcl
+**/.terraform/
+**/terraform.tfstate.*
+**/terraform.tfstate
+**/.terraform.tfstate.lock.info
+**/.terraform.lock.hcl
+**/*.plan
+**/output/
+**/*-aks-flux/
+
 
 #Composer
 vendor/
