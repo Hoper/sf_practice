@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: sos
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGccXY9lwZKmE/5xyI7qAbSBF1QhugPnbx3X6yQXfBAbFHPb9hQxdELRPDy8Bto4IzlBfD58sIQRq+iEc4G+o+TedwIKTDy+Kq9zPKGP9K3xE7pL8k7PGtx5Q/q/Z4CYUb+Pj47W8d+ZyfXNWgq3uudGjTUHDDw2s3yvaTZEIshDJLWmUS2E1jiuoXCOxwE7W5p9RR7JjaK3vopdra6lIoG3v/JMQCZP0eY7JH4uhni8XeWkrM2D+ur5v12LoCqlPlFgI0bIKFlU4y3hOERtDTy4z+pN163zqKquVcF+VGA7AuY7nbbL5r1dgrStP8S7FNXbYb80U7UDUNBY+Hk1nx sos@sos-VB
