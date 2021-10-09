@@ -7,6 +7,11 @@
 node_modules/
 dist/
 
+
+#Terraform 
+.terraform/
+.terraform.lock.hcl
+
 #Composer
 vendor/
 
