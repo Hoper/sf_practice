@@ -8,10 +8,10 @@ terraform {
 }
 
 provider "yandex" {
-  token     = " " # need to use vars
-  cloud_id  = " "
-  folder_id = " "
-  zone      = " "
+  token     = var.ya_token # need to use vars
+  cloud_id  = var.ya_cloud_id
+  folder_id = var.ya_folder_id
+  zone      = var.ya_zone
 }
 
 # ++++++++++++++++++++ master noda   +++++++++++++++++++++++++
@@ -23,7 +23,7 @@ resource "yandex_compute_instance" "master-1" {
   resources {
     cores  = 2
     memory = 4
-    core_fraction = 10  # trotle CPU 10% low cost
+    core_fraction = 20  # trotle CPU 20% low cost (steps 5, 20, 100)
   }
 
   boot_disk {
@@ -53,7 +53,7 @@ resource "yandex_compute_instance" "node-1" {
   resources {
     cores  = 2
     memory = 2
-    core_fraction = 10  # trotle CPU 10% low cost
+    core_fraction = 20  # trotle CPU 20% low cost (steps 5, 20, 100)
   }
 
   boot_disk {
@@ -83,7 +83,7 @@ resource "yandex_compute_instance" "node-2" {
   resources {
     cores  = 2
     memory = 2
-    core_fraction = 10  # trotle CPU 10% low cost
+    core_fraction = 20  # trotle CPU 20% low cost (steps 5, 20, 100)
   }
 
   boot_disk {
