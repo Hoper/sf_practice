@@ -1,0 +1,8 @@
+#on master
+sudo kubeadm --pod-network-cidr=192.168.6.0/24 init
+# kubeadm join 192.168.6.16:6443 --token wkf6ah.0ibn60cbgqa71k4z \
+	--discovery-token-ca-cert-hash sha256:bc18cecc69ed33bf069b7f7819bd46d2c3c17e6ae0b5fcc5ab3b5297c8bf64ce 
+
+#on workers
+kubeadm join 192.168.6.16:6443 --token wkf6ah.0ibn60cbgqa71k4z \
+	--discovery-token-ca-cert-hash sha256:bc18cecc69ed33bf069b7f7819bd46d2c3c17e6ae0b5fcc5ab3b5297c8bf64ce
