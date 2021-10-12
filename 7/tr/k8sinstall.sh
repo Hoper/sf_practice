@@ -33,3 +33,9 @@ cat <<EOF | sudo tee /etc/docker/daemon.json
 EOF
 sudo systemctl enable docker.service --now
 sudo shutdown -r now
+
+#  !!!!! on the master
+#  sudo kubeadm --apiserver-cert-extra-sans %ext_ip_adress% --pod-network-cidr 192.168.6.0/24 init
+#  mkdir -p $HOME/.kube
+#  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+#  sudo chown $(id -u):$(id -g) $HOME/.kube/config
